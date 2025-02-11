@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-fondo: #f2f2f2;
+  --color-principal: #2f80ed;
+  --color-secundario: #4f4f4f;
+  --color-tarjeta: #fff;
+  --color-letra: #828282;
+}
+
+body {
+  background-color: var(--color-fondo);
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-letra);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.curriculum {
+  width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
+}
+
+.seccion1,
+.seccion2 {
+  margin-top: 30px;
+}
+
+.personal,
+.experiencia,
+.hobbies {
+  background-color: var(--color-tarjeta);
+  padding: 15px;
+  width: 320px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.personal__imagen {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.personal__info-titulo {
+  font-size: 18px;
+  color: var(--color-secundario);
+}
+
+.personal__info,
+.personal__conctacto {
+  margin-bottom: 15px;
+}
+
+.personal__conctacto {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-secundario);
+}
+
+.personal__conctacto-correo,
+.hobbies__articulo-titulo {
+  margin-bottom: 5px;
+}
+
+.experiencia__titulo,
+.hobbies__titulo,
+.projects-titulo,
+.blog__titulo {
+  color: var(--color-secundario);
+  font-weight: 400;
+}
+.experiencia__articulo {
+  display: flex;
+  margin-top: 20px;
+}
+
+.experiencia__articulo-imagen {
+  width: 100px;
+  height: 100px;
+}
+
+.experiencia__articulo-datos-header,
+.hobbies__articulo-imagen {
+  margin-bottom: 15px;
+}
+
+.experiencia__articulo-datos-header {
+  margin-bottom: 15px;
+}
+
+.experiencia__articulo-datos-header-h3,
+.hobbies__articulo-imagen {
+  margin-top: 15px;
+}
+
+/* SECCION 2 */
+
+.contenedor__habilidades {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.habilidades {
+  background-color: var(--color-tarjeta);
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  height: fit-content;
+}
+
+.habilidades__titulo {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.habilidades__listado {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+.habilidades__item {
+  list-style: none;
+  font-size: 12px;
+  display: flex;
+  max-width: 75%;
+  justify-content: space-between;
+}
+
+.projects-titulo,
+.blog__titulo {
+  background-color: var(--color-tarjeta);
+  margin: 15px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.proyectos__articulo {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--color-tarjeta);
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.proyectos__articulo-imagen {
+  width: 180px;
+  margin-left: 15px;
+}
+
+.proyectos__articulo-contenido-h3 {
+  margin: 15px auto;
+}
+
+.proyectos__articulo-botones {
+  margin-top: 25px;
+}
+
+.proyectos__articulo-botones-btn {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-principal);
+  font-size: 12px;
+  text-decoration: none;
+}
+.proyectos__articulo-botones-activo {
+  background-color: var(--color-principal);
+  color: var(--color-tarjeta);
+  margin-right: 10px;
+}
+
+.blog__articulo {
+  display: flex;
+  gap: 20px;
+  background-color: var(--color-tarjeta);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.blog__articulo-contendor {
+  width: 400px;
+}
+
+.blog__articulo-titulo,
+.blog__articulo_descripcion {
+  margin-bottom: 15px;
+}
+
+.blog__articulo_enlace {
+  margin-top: 15px;
+}
+.blog__articulo-imagen {
+  width: 100%;
+  justify-content: center;
+}
+
+.blog__articulo-imagen-1 {
+  max-width: 100%;
+  height: 80%;
+  margin-top: 30px;
+}
+
+/* breakpoint */
+@media (max-width: 990px) {
+  .contenedor__habilidades {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .habilidades,
+  .habilidades__listado {
+    width: 100%;
+  }
+}
+
+@media (max-width: 828px) {
+  .curriculum {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .seccion2 {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+  }
+
+  .habilidades,
+  .habilidades__listado,
+  .proyectos__articulo,
+  .blog__articulo,
+  .blog__articulo-contendor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .proyectos__articulo_descripcion {
+    width: 100%;
+  }
+}
